@@ -1,0 +1,9 @@
+.codex-editor{
+    background-color: gray;
+    color: white;
+    width: 100%;
+    border: 1px solid black;
+}
+.ce-toolbox__button, .ce-toolbar__settings-btn, .icon--plus{
+    color: white !important;
+}
