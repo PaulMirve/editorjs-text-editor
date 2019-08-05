@@ -5,9 +5,12 @@ import './Editor.css';
 
 export default class MyEditor extends Component {
 
+    state = {text: null}
+
     render() {
+        console.log(this.state.texto);
         return (
-            <div style={this.wrapperStyle}>
+            <div>
                 <Editor
                     autofocus
                     excludeDefaultTools={['code', 'raw']}
@@ -25,10 +28,11 @@ export default class MyEditor extends Component {
                                 }
                             }
                         }
-
                     }}
+                    onChange={(data)=>this.setState({text: data.blocks})}
                 />
-            </div>
+                <button onClick={this.getJSON}>Texto</button>
+            </div>    
         )
     }
 }
